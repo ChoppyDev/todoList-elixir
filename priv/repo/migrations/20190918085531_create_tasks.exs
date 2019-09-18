@@ -5,7 +5,7 @@ defmodule Todolist.Repo.Migrations.CreateTasks do
     create table(:tasks) do
       add :title, :string
       add :description, :string
-      add :status, :integer
+      add :status, :boolean, default: false, null: false
       add :user, references(:users, on_delete: :nothing)
 
       timestamps()

@@ -1,4 +1,4 @@
-defmodule Todolist.User do
+defmodule Todolist.List.User do
   use Ecto.Schema
   import Ecto.Changeset
 

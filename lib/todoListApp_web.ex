@@ -30,7 +30,7 @@ defmodule TodolistWeb do
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/todolistApp_web/templates",
+        root: "lib/todoListApp_web/templates",
         namespace: TodolistWeb
 
       # Import convenience functions from controllers

@@ -7,14 +7,14 @@
 # General application configuration
 use Mix.Config
 
-config :todolistApp,
+config :todoListApp,
   namespace: Todolist,
   ecto_repos: [Todolist.Repo]
 
 # Configures the endpoint
-config :todolistApp, TodolistWeb.Endpoint,
+config :todoListApp, TodolistWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "qhqmH0fBPMmmnl0PW8AAxg3e+b+wrmdSra3OOKmotRiEuAOCQYKcvFSsqbD5iRWo",
+  secret_key_base: "CpfW4WCyvFNPEc3RR1DVf/xK+aZlvE+n4MqrOf8CLKTyRzswZB7Y32zqHaJclhwg",
   render_errors: [view: TodolistWeb.ErrorView, accepts: ~w(json)],
   pubsub: [name: Todolist.PubSub, adapter: Phoenix.PubSub.PG2]
 

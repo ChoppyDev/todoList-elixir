@@ -1,5 +1,5 @@
 defmodule TodolistWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :todolistApp
+  use Phoenix.Endpoint, otp_app: :todoListApp
 
   socket "/socket", TodolistWeb.UserSocket,
     websocket: true,
@@ -11,7 +11,7 @@ defmodule TodolistWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :todolistApp,
+    from: :todoListApp,
     gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
@@ -37,8 +37,8 @@ defmodule TodolistWeb.Endpoint do
   # Set :encryption_salt if you would also like to encrypt it.
   plug Plug.Session,
     store: :cookie,
-    key: "_todolistApp_key",
-    signing_salt: "pU1qn/6q"
+    key: "_todoListApp_key",
+    signing_salt: "wj4+dNz0"
 
   plug TodolistWeb.Router
 end

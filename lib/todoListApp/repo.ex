@@ -1,5 +1,5 @@
 defmodule Todolist.Repo do
   use Ecto.Repo,
-    otp_app: :todolistApp,
+    otp_app: :todoListApp,
     adapter: Ecto.Adapters.Postgres
 end

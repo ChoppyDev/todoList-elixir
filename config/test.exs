@@ -1,7 +1,7 @@
 use Mix.Config
 
 # Configure your database
-config :todolistApp, Todolist.Repo,
+config :todoListApp, Todolist.Repo,
   username: "postgres",
   password: "postgres",
   database: "todolistapp_test",
@@ -10,7 +10,7 @@ config :todolistApp, Todolist.Repo,
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :todolistApp, TodolistWeb.Endpoint,
+config :todoListApp, TodolistWeb.Endpoint,
   http: [port: 4002],
   server: false
 

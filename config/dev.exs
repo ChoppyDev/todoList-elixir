@@ -1,9 +1,9 @@
 use Mix.Config
 
 # Configure your database
-config :todolistApp, Todolist.Repo,
-  username: "postgres",
-  password: "postgres",
+config :todoListApp, Todolist.Repo,
+  username: "user",
+  password: "user",
   database: "todolistapp_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
@@ -15,7 +15,7 @@ config :todolistApp, Todolist.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :todolistApp, TodolistWeb.Endpoint,
+config :todoListApp, TodolistWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,

@@ -1,12 +1,12 @@
-defmodule Todolist.Task do
+defmodule Todolist.List.Task do
   use Ecto.Schema
   import Ecto.Changeset
 
   schema "tasks" do
     field :description, :string
-    field :status, :integer
+    field :status, :boolean, default: false
     field :title, :string
-    field :user, :id
+    belongs_to :user, Todolist.List.User
 
     timestamps()
   end
@@ -15,6 +15,6 @@ defmodule Todolist.Task do
   def changeset(task, attrs) do
     task
     |> cast(attrs, [:title, :description, :status])
-    |> validate_required([:title, :description, :status])
+    |> validate_required([:title, :description, :status,:user])
   end
 end

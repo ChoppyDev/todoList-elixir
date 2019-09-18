@@ -1,19 +1,21 @@
 defmodule TodolistWeb.UserControllerTest do
   use TodolistWeb.ConnCase
 
-  alias Todolist.Todolists
-  alias Todolist.Todolists.User
+  alias Todolist.List
+  alias Todolist.List.User
 
   @create_attrs %{
-
+    first_name: "some first_name",
+    last_name: "some last_name"
   }
   @update_attrs %{
-
+    first_name: "some updated first_name",
+    last_name: "some updated last_name"
   }
-  @invalid_attrs %{}
+  @invalid_attrs %{first_name: nil, last_name: nil}
 
   def fixture(:user) do
-    {:ok, user} = Todolists.create_user(@create_attrs)
+    {:ok, user} = List.create_user(@create_attrs)
     user
   end
 
@@ -36,7 +38,9 @@ defmodule TodolistWeb.UserControllerTest do
       conn = get(conn, Routes.user_path(conn, :show, id))
 
       assert %{
-               "id" => id
+               "id" => id,
+               "first_name" => "some first_name",
+               "last_name" => "some last_name"
              } = json_response(conn, 200)["data"]
     end
 
@@ -56,7 +60,9 @@ defmodule TodolistWeb.UserControllerTest do
       conn = get(conn, Routes.user_path(conn, :show, id))
 
       assert %{
-               "id" => id
+               "id" => id,
+               "first_name" => "some updated first_name",
+               "last_name" => "some updated last_name"
              } = json_response(conn, 200)["data"]
     end
 
